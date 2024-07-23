@@ -19,3 +19,10 @@ gestionnaire | modifier du contenu |  | - | 3 |
 gestionnaire | pouvoir créer du contenu |  | - | 3 |
 gestionnaire | pouvoir supprimer du contenu |  | - | 3 |
 gestionnaire | récupérer les données du formulaire | prendre en compte les demande de bénévolat | - | 3 |
+
+
+
+
+
+
+https://excalidraw.com/#json=JW9yF2Y6zgzwt_yNd24nO,IgmCBldXoFis7tugmPmM0w
