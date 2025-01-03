@@ -7,6 +7,7 @@
 | `age`                | INTEGER                              | NULLABLE                          | Age of the cat in years (nullable if unknown).                 |
 | `description`        | TEXT                                 | NULLABLE                          | Additional information or description about the cat.          |
 | `adoption_status`    | ENUM('Disponible', 'Adopté', 'Reservé') | NOT NULL DEFAULT 'Disponible'     | Current adoption status of the cat.                           |
+| `image_url`          | VARCHAR(255)                         | NULLABLE                          | URL of the cat's image.                                        |
 
 ---
 
@@ -16,4 +17,4 @@
 - **`age`**: Optional field to record the cat's age, allows null if the age is unknown.
 - **`description`**: Optional field for providing more details about the cat.
 - **`adoption_status`**: Restricted to specific values (`Available`, `Adopted`, `Reserved`) to ensure consistency.
-
+- **`image_url`**: Optional field for storing the URL of the cat's image. Can be null if no image is available.

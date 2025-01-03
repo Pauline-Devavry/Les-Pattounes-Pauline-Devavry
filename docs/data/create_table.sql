@@ -7,6 +7,7 @@ CREATE TABLE Cat (
     name VARCHAR(50) NOT NULL,
     age INTEGER,
     description TEXT,
-    adoption_status adoption_status_enum NOT NULL DEFAULT 'Disponible'
+    adoption_status adoption_status_enum NOT NULL DEFAULT 'Disponible',
+    image_url VARCHAR(255)
 );
 
