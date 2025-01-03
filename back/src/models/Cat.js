@@ -9,30 +9,28 @@ Cat.init(
         type: DataTypes.STRING(50),
         allowNull: false,
       },
-
+  
       age: {
         type: DataTypes.INTEGER,
       },
-
+  
       description: {
         type: DataTypes.TEXT,
       },
   
-      image_url: {
-        type: DataTypes.STRING(255),
+      adoption_status: {
+        type: DataTypes.ENUM('Disponible', 'Adopté', 'Réservé'),
         allowNull: false,
+        defaultValue: 'Disponible',
       },
   
-      category_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'category', 
-          key: 'id', 
-        },
+      image_url: {
+        type: DataTypes.STRING(255),
+        allowNull: true,
       },
     },
     {
       sequelize: sequelize(),
-      tableName: "attraction",
+      tableName: "cats",
     }
   );
