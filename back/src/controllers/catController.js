@@ -3,9 +3,14 @@ import { Cat } from "../models/Cat.js";
 // Méthode pour récupérer tous les chats
 export async function getAllCats(req,res) {
 
-    const cats = await Cat.findAll();
-    return cats;
-    
+    try {
+        const cats = await Cat.findAll();
+        console.log("Tous les chats récupérés : ", cats);
+        res.status(200).json(cats); // Renvoie la liste des chats avec un code de succès 200
+    } catch (error) {
+        console.log("Erreur lors de la récupération des chats : ", error);
+        res.status(500).json({ error: "Une erreur est survenue lors de la récupération des chats." }); // Gère l'erreur
+    }
 }
 
 // Méthode pour récupérer un chat par son ID
@@ -15,8 +20,9 @@ export async function getOneCat(req, res, next) {
     if (CatId) {
         res.json(CatId).status(200);
     } else {
-        next();
+        res.status(404).json({ message: "Chat non trouvé" }); 
     }
+
 }
 
 // Méthode pour créer un chat

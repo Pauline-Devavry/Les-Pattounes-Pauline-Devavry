@@ -5,6 +5,11 @@ export class Cat extends Model {}
 
 Cat.init(
     {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true, // Ajoute auto-incrément
+      },
       name: {
         type: DataTypes.STRING(50),
         allowNull: false,
@@ -31,6 +36,7 @@ Cat.init(
     },
     {
       sequelize: sequelize(),
-      tableName: "cats",
+      tableName: "cat",
+      timestamps: false, 
     }
   );

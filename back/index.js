@@ -1,6 +1,7 @@
 import "dotenv/config"; // Pour charger le fichier .env
 import express from 'express';
 import { sequelize } from './src/database/client.js'; // Importation de la fonction sequelize
+import router from "./src/router/main.router.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -18,6 +19,8 @@ sequelize().authenticate()  // Vérification de la connexion
 app.get('/', (req, res) => {
   res.send('Hello les pattounes!');
 });
+
+app.use(router);
 
 // Lancer le serveur
 app.listen(port, () => {
