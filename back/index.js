@@ -1,6 +1,6 @@
 import "dotenv/config"; // Pour charger le fichier .env
 import express from 'express';
-import { sequelize } from './src/client.js'; // Importation de la fonction sequelize
+import { sequelize } from './src/database/client.js'; // Importation de la fonction sequelize
 
 const app = express();
 const port = process.env.PORT || 3000;

@@ -1,19 +1,19 @@
-# Dictionnaire de données - Table `CHAT`
+# Data Dictionary - Table `Cat`
 
-| **Nom du champ**  | **Type de données**                      | **Contraintes**                   | **Description**                                                |
-|--------------------|------------------------------------------|------------------------------------|----------------------------------------------------------------|
-| `chat_id`         | INTEGER                                 | PRIMARY KEY, AUTO_INCREMENT       | Identifiant unique pour chaque chat.                          |
-| `prénom`          | VARCHAR(50)                            | NOT NULL                          | Prénom du chat.                                                |
-| `âge`             | INTEGER                                 | NULLABLE                          | Âge du chat en années (peut être nul si l'âge est inconnu).    |
-| `description`     | TEXT                                    | NULLABLE                          | Description ou informations supplémentaires sur le chat.       |
-| `statut_adoption` | ENUM('Disponible', 'Adopté', 'Réservé') | NOT NULL DEFAULT 'Disponible'     | Statut actuel d’adoption du chat.                             |
+| **Field Name**       | **Data Type**                         | **Constraints**                   | **Description**                                                |
+|-----------------------|---------------------------------------|------------------------------------|----------------------------------------------------------------|
+| `cat_id`             | INTEGER                              | PRIMARY KEY, AUTO_INCREMENT       | Unique identifier for each cat.                               |
+| `name`               | VARCHAR(50)                         | NOT NULL                          | Name of the cat.                                               |
+| `age`                | INTEGER                              | NULLABLE                          | Age of the cat in years (nullable if unknown).                 |
+| `description`        | TEXT                                 | NULLABLE                          | Additional information or description about the cat.          |
+| `adoption_status`    | ENUM('Disponible', 'Adopté', 'Reservé') | NOT NULL DEFAULT 'Disponible'     | Current adoption status of the cat.                           |
 
 ---
 
-## Détails supplémentaires :
-- **`chat_id`** : Identifiant unique, auto-incrémenté.
-- **`prénom`** : Champ obligatoire pour identifier le chat.
-- **`âge`** : Champ facultatif pour permettre la création même si l'âge est inconnu.
-- **`description`** : Détails facultatifs pour enrichir les informations sur le chat.
-- **`statut_adoption`** : Restriction des valeurs possibles pour assurer une cohérence.
+## Additional Details:
+- **`cat_id`**: Unique, auto-incremented identifier for each cat.
+- **`name`**: Mandatory field for identifying the cat.
+- **`age`**: Optional field to record the cat's age, allows null if the age is unknown.
+- **`description`**: Optional field for providing more details about the cat.
+- **`adoption_status`**: Restricted to specific values (`Available`, `Adopted`, `Reserved`) to ensure consistency.
 
