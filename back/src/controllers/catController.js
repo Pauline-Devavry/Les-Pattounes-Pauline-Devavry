@@ -1,4 +1,5 @@
 import { Cat } from "../models/Cat.js";
+import Joi from "joi";
 
 // Méthode pour récupérer tous les chats
 export async function getAllCats(req,res) {
@@ -26,6 +27,31 @@ export async function getOneCat(req, res, next) {
 }
 
 // Méthode pour créer un chat
+export async function createOneCat(req, res, next) {
+    const catSchema = Joi.object({
+     // id: Joi.number().integer().positive().optional(),
+      name: Joi.string().max(50).required(),
+      age: Joi.number(),
+      description: Joi.string(),
+      adoption_status: Joi.string().valid('Disponible', 'Adopté', 'Réservé').required(),
+      image_url: Joi.string().max(255),
+     
+    });
+  
+    const { error, value } = catSchema.validate(req.body);
+    if (error) {
+      const errorMessage = { message: "Vous devez remplir tous les champs" };
+      return res.status(400).json(errorMessage);
+    }
+  
+    const createdOneCat = await Cat.create(value);
+  
+  
+    return res.status(201).json({
+      message: "Chat créé avec succès.",
+      cat: createdOneCat,
+    });
+  }
 
 // Méthode pour supprimer un chat
 
