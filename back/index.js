@@ -4,6 +4,10 @@ import { sequelize } from './src/database/client.js'; // Importation de la fonct
 import router from "./src/router/main.router.js";
 
 const app = express();
+
+// Middleware pour parser les requêtes JSON
+app.use(express.json());
+
 const port = process.env.PORT || 3000;
 
 // Connexion à la base de données
