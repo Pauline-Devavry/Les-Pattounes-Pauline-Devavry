@@ -1,11 +1,14 @@
 import React from 'react';
-import CatsList from './components/CatsList.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <CatsList />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </Router>
   );
 }
 
