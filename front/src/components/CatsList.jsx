@@ -15,14 +15,14 @@ function CatsList() {
   return (
     <div>
       <h2>Liste des Chats</h2>
-       <ul>
+       <div className='flex flex-wrap'>
         {cats.map((cat) => (
-          <li key={cat.id}>
-            {cat.name} - {cat.age} ans
-            {cat.description}
-          </li>
+          <div className='w-1/6' key={cat.id}>
+            <h3 className='text-sky-400 font-bold'>{cat.name} - {cat.age} ans</h3>
+            <p>{cat.description}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
