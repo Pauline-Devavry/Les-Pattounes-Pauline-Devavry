@@ -2,9 +2,12 @@ import "dotenv/config"; // Pour charger le fichier .env
 import express from 'express';
 import { sequelize } from './src/database/client.js'; // Importation de la fonction sequelize
 import router from "./src/router/main.router.js";
+import cors from 'cors';
 
 const app = express();
 
+// Middleware pour activer CORS
+app.use(cors());
 // Middleware pour parser les requêtes JSON
 app.use(express.json());
 
