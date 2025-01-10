@@ -4,8 +4,9 @@ import CatsList from '../components/CatsList';
 function Homepage() {
 
   return (
-    <div>
-      <h1>Homepage</h1>
+    <div className="bg-backgroundColor">
+      <h1 className="text-h1TextColor">Les Pattounes du Coeur</h1>
+      <h2 className="text-h2TextColor">Qui sommes-nous ?</h2>
       <CatsList />
     </div>
   )
