@@ -1,24 +1,14 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage.jsx';
 
 function App() {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/test");
-        console.log("Données reçues :", response.data);
-      } catch (error) {
-        console.error("Erreur lors de la requête :", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
-    <div>
-      <h1>Test de Proxy</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </Router>
   );
 }
 
