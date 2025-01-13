@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CatsList from '../components/CatsList';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Homepage() {
 
@@ -8,6 +9,7 @@ function Homepage() {
     <div className="bg-backgroundColor">
       <Header/>
       <CatsList />
+      <Footer />
     </div>
   )
 }
