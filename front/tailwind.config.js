@@ -16,10 +16,11 @@ module.exports = {
         textButtonColor: "#FEFEFE",
         footerBackgroundColor: "#C02046",
       },
+      fontFamily: {
+        rubik: ["Rubik"],
+        montserrat: ["Montserrat"],
+      },
     },
-  },
-  fontFamily: {
-    rubik: ["Rubik"],
   },
   
   plugins: [],
