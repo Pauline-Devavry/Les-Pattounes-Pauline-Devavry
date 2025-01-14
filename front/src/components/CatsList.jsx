@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import imageCardCat from '../images/img-chat.jpg'
+import CatCard from './CatCard'
 
 function CatsList() {
   const [cats, setCats] = useState([])
@@ -18,11 +18,12 @@ function CatsList() {
       <h2>Liste des Chats</h2>
        <div className='flex flex-wrap'>
         {cats.map((cat) => (
-          <div className='w-1/6' key={cat.id}>
-            <img src={imageCardCat} alt="image chat" />
-            <h3 className='text-sky-400 font-bold'>{cat.name} - {cat.age} ans</h3>
-            <p>{cat.description}</p>
-          </div>
+          <CatCard
+          key={cat.id}
+          name={cat.name}
+          age={cat.age}
+          description={cat.description}
+        />
         ))}
       </div>
     </div>
