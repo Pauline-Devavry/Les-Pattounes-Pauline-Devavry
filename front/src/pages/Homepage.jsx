@@ -9,7 +9,7 @@ function Homepage() {
   return (
     <div className="bg-backgroundColor">
       <Header/>
-      <CatsList />
+      <CatsList limit={6} />
       <Footer />
     </div>
   )

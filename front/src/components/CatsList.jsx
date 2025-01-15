@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CatCard from './CatCard'
 
-function CatsList() {
+function CatsList({limit}) {
   const [cats, setCats] = useState([])
 
   useEffect(() => {
@@ -13,11 +13,14 @@ function CatsList() {
       )
   }, []) // L'effet se lance uniquement au chargement du composant
 
+  // Mise en place de la limite d'affichage
+  const displayedCats = limit ? cats.slice(0, limit) : cats;
+
   return (
     <div>
       <h2>Liste des Chats</h2>
        <div className='flex flex-wrap'>
-        {cats.map((cat) => (
+        {displayedCats.map((cat) => (
           <CatCard
           key={cat.id}
           name={cat.name}
