@@ -18,8 +18,8 @@ function CatsList({limit}) {
 
   return (
     <div>
-      <h2>Liste des Chats</h2>
-       <div className='flex flex-wrap'>
+  {/* Liste des Chats */}
+       <div className='flex flex-wrap px-56'>
         {displayedCats.map((cat) => (
           <CatCard
           key={cat.id}
