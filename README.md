@@ -1,47 +1,43 @@
 # Les pattounes <3
 
-## Tâches
+Les Pattounes du Coeur est un projet web conçu afin de faire connaître l'association, donner des informations, montrer les chats disponibles à l'adoption, valoriser le travail des bénévoles, entrer en contact avec l'association, faire des dons à l'association.
 
-### 0. Préparation de l'environnement de travail
-- Etat : à faire
-- [Spécifications](docs/specifications/preparation_env_de_travail.md)
+**Ce projet est réalisé à but non lucratif** et est développé sur mon temps personnel dans le cadre de ma progression en développement web. Il me permet de consolider mes compétences techniques tout en contribuant à une cause qui me tient à cœur : la protection animale.
 
-### 1. Mise en place du thème
-- Etat : à faire
-- [Spécifications](docs/specifications/mise_en_place_theme.md)
+## Fonctionnalités
 
-### 2. Page d'accueil
-- Etat : à faire
-- [Spécifications](docs/specifications/page_accueil.md)
+- **Catalogue de chats** : Parcourez la liste des chats disponibles en vue d'une adoption.
+- **Détails d'un chat** : Consultez les informations spécifiques sur chaque chat (nom, âge, description, etc.).
+- **Formulaire de contact** : Permet aux visiteurs de poser des questions ou de soumettre une demande d'adoption.
+- **Informations sur l'association** : En savoir plus sur Les Pattounes du Cœur et ses actions, pouvoir faire un don.
 
-### 3. Page "Chats à l'adoption"
-- Etat : à faire
-- Spécifications : à faire
+## Technologies utilisées
 
-### 4. Page "Détails d'un chat"
-- Etat : à faire
-- Spécifications : à faire
+- **Back-end** : Node.js, Express.js, PostgreSQL, Sequelize
+- **Front-end** : React.js, Tailwind CSS
+- **Tests des API** : Insomnia
+- **Outils** : ESLint, Prettier, Docker
 
-### 5. Page "Contact"
-- Etat : à faire
-- Spécifications : à faire
+## Installation et exécution
 
-### 6. Page "Pourquoi adopter ?"
-- Etat : à faire
-- Spécifications : à faire
+### Prérequis
 
-### 7. Page "Nous aider"
-- Etat : à faire
-- Spécifications : à faire
+- Node.js
+- PostgreSQL
+- Docker
 
-### 8. Page "Devenir famille d'accueil bénévole"
-- Etat : à faire
-- Spécifications : à faire
+### Étapes d'installation
 
-### 9. Page "Devenir gestionnaire bénévole"
-- Etat : à faire
-- Spécifications : à faire
+1. **Clonez le repository** :
+   ```bash
+   git clone https://github.com/votre-utilisateur/Les-Pattounes-Pauline-Devavry.git
+   
+2. **Configurez le back-end** :
+    - accédez au dossier back-end puis créez un fichier .env à l'aide du fichier .env.example
+    - installer les dépendances avec la commande "npm install"
+    - lancer le serveur avec "npm run dev"
 
-### 10. Espace gestionnaire connecté
-- Etat : à faire
-- Spécifications : à faire
+2. **Configurez le front-end** :
+    - accédez au dossier back-end
+    - installer les dépendances avec la commande "npm install"
+    - lancer le serveur avec "npm start"
