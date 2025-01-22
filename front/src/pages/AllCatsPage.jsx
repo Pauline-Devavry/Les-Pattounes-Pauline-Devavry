@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CatsList from '../components/CatsList'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Button from '../components/Button'
 
 function AllCats() {
   return (
@@ -51,7 +52,7 @@ function AllCats() {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <button className="bg-buttonColor">Nous contacter</button>
+            <Button text="Nous contacter" to="/contact" />
             </div>
           </div>
         </section>

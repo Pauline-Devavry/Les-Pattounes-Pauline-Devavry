@@ -6,6 +6,7 @@ import ImageCatBlack from '../images/chat-noir-accueil.png'
 import ImageBenevolesNumber from '../images/benevole.png'
 import ImageAdoptionsNumber from '../images/chat.png'
 import ImageReproduction from '../images/Graphique_reproduction-ok.jpg'
+import Button from '../components/Button'
 
 function Homepage() {
   return (
@@ -55,7 +56,7 @@ function Homepage() {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <button className="bg-buttonColor">Nous contacter</button>
+              <Button text="Nous contacter" to="/contact" />
             </div>
             {/* IMAGE CHAT */}
             <div className="w-full pt-14 flex justify-center md:w-1/2 md:pl-4 md:pt-0">
@@ -75,7 +76,7 @@ function Homepage() {
           Nos chats à l'adoption
         </h1>
         <CatsList limit={6} />
-        <button className="bg-buttonColor">Voir tous nos chats</button>
+        <Button text="Voir tous nos chats" to="/chats" />
       </div>
 
       {/* BLOC QUELQUES CHIFFRES */}
@@ -127,7 +128,7 @@ function Homepage() {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <button className="bg-buttonColor">Faire un don</button>
+              <Button text="Nous aider" to="/nous-aider" />
             </div>
             {/* IMAGE CHAT */}
             <div className="w-full pt-14 flex justify-center md:w-1/2 md:pl-4 md:pt-0">

@@ -25,7 +25,7 @@ function Header() {
               <a href="/chats">Chats à l'adoption</a>
             </li>
             <li className="px-4 py-2 sm:py-0">
-              <a href="/contact">Nous aider</a>
+              <a href="/nous-aider">Nous aider</a>
             </li>
             <li className="px-4 py-2 sm:py-0">
               <a href="/contact">Contact</a>
