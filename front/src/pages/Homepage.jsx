@@ -7,6 +7,7 @@ import ImageBenevolesNumber from '../images/benevole.png'
 import ImageAdoptionsNumber from '../images/chat.png'
 import ImageReproduction from '../images/Graphique_reproduction-ok.jpg'
 import Button from '../components/Button'
+import TopButton from '../components/TopButton'
 
 function Homepage() {
   return (
@@ -82,13 +83,21 @@ function Homepage() {
       {/* BLOC QUELQUES CHIFFRES */}
       <section className="py-11 border-2 border-primaryColor bg-transparent">
         <div className="font-montserrat text-center font-bold text-h2TextColor md:flex">
-          <div className='md:w-1/2 flex flex-col items-center justify-center'>
+          <div className="md:w-1/2 flex flex-col items-center justify-center">
             <p>+ de 120 adoptions</p>
-            <img className='mb-7 md:w-32 max-w-28' src={ImageBenevolesNumber} alt="Image bénévoles" />
+            <img
+              className="mb-7 md:w-32 max-w-28"
+              src={ImageBenevolesNumber}
+              alt="Image bénévoles"
+            />
           </div>
-          <div className='md:w-1/2 flex flex-col items-center justify-center'>
+          <div className="md:w-1/2 flex flex-col items-center justify-center">
             <p>+ de 80 bénévoles</p>
-            <img className= 'mb-7 md:w-32 max-w-28' src={ImageAdoptionsNumber} alt="Image adoptions" />
+            <img
+              className="mb-7 md:w-32 max-w-28"
+              src={ImageAdoptionsNumber}
+              alt="Image adoptions"
+            />
           </div>
         </div>
       </section>
@@ -141,6 +150,9 @@ function Homepage() {
           </div>
         </section>
       </div>
+
+      {/* TOP BUTTON */}
+      <TopButton />
 
       {/* FOOTER */}
       <Footer />

@@ -3,6 +3,7 @@ import CatsList from '../components/CatsList'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
+import TopButton from '../components/TopButton'
 
 function AllCats() {
   return (
@@ -66,6 +67,9 @@ function AllCats() {
         <CatsList limit={0} />
         <svg class="animate-bounce w-6 h-6 ..."></svg>
       </div>
+
+      {/* TOP BUTTON */}
+      <TopButton />
 
       {/* FOOTER */}
       <Footer />
