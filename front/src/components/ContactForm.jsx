@@ -19,7 +19,25 @@ const ContactForm = () => {
   // Gérer l'envoi du formulaire (pour l'instant, juste un log)
   const handleSubmit = (e) => {
     e.preventDefault(); // Empêche le rechargement de toute la page
-    console.log("Données du formulaire :", formData);
+
+  // Envoie des données au back-end via POST
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData), // Envoie les données du formulaire
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Gère la réponse, comme afficher un message de succès
+      console.log('Réponse du serveur :', data);
+    })
+    .catch((error) => {
+      console.error('Erreur lors de l\'envoi du formulaire:', error);
+    });
+
+    //console.log("Données du formulaire :", formData);
   };
 
   return (
