@@ -54,7 +54,7 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h2>Contactez-nous</h2>
+      {/* <h2>Contactez-nous</h2> */}
       <form
         onSubmit={handleSubmit}
         className="max-w-lg mx-auto p-4 border rounded shadow"
