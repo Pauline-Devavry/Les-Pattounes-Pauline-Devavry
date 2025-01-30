@@ -3,7 +3,7 @@ import CardHelp from '../components/CardHelp'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
-import DonImg from '../images/logo-vectoriel-helloasso.jpg'
+import DonImg from '../images/logohelloasso.jpg'
 import ImageBenevole from '../images/imgbenevole.jpg'
 
 function HelpUsPage() {
@@ -18,14 +18,13 @@ function HelpUsPage() {
         </div>
       </div>
 
-
       {/* BLOC ADHESION & DON */}
       <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-x-8 md:space-y-0 pb-14">
         {/* Card pour "Adhérer à l'asso" */}
         <CardHelp
           title="Adhérer à l'association"
-          description="Aidez notre association à grandir en devenant membre."
-          link="https://www.helloasso.com/adhesion"
+          description="En adhérant à notre association, vous venez en aide aux minous en détresse."
+          link="https://www.helloasso.com/associations/les-pattounes-du-coeur/adhesions/adhesion-2025?fbclid=IwY2xjawHeABRleHRuA2FlbQIxMAABHUDDuKfOy4lcclgSOMZOxw5gfUhlMteri9aVlnb_7sG4KK6Bjc1cZciRSQ_aem_Uv6TajP0odVS2p87q9ewbA"
           imageSrc={DonImg}
           buttonText="Adhérer"
         />
@@ -33,15 +32,15 @@ function HelpUsPage() {
         {/* Card pour "Faire un don" */}
         <CardHelp
           title="Faire un don"
-          description="Soutenez notre action en faisant un don libre."
-          link="https://www.helloasso.com/don"
+          description="Soutenez notre association en faisant un don libre."
+          link="https://www.helloasso.com/associations/les-pattounes-du-coeur/formulaires/1"
           imageSrc={DonImg}
           buttonText="Faire un don"
         />
       </div>
 
-            {/* BLOC DEVENIR BÉNÉVOLE*/}
-            <div className="container mx-auto px-4">
+      {/* BLOC DEVENIR BÉNÉVOLE*/}
+      <div className="container mx-auto px-4">
         <section className="m-0 pt-14 pb-14">
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col justify-center w-full items-center text-center md:w-1/2 md:pr-4 md:items-start md:text-start">
@@ -80,7 +79,7 @@ function HelpUsPage() {
             {/* IMAGE CHAT */}
             <div className="w-full pt-14 flex justify-center md:w-1/2 md:pl-4 md:pt-0">
               <img
-                className="max-w-[70%] md:w-[1100px]"
+                className="max-w-[70%] md:max-w-2xl"
                 src={ImageBenevole}
                 alt="Image bénévolat"
               />
