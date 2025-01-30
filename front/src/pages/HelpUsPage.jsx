@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import CardHelp from '../components/CardHelp'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
-import helloAssoLogo from '../images/logo-vectoriel-helloasso.jpg'
+import DonImg from '../images/logo-vectoriel-helloasso.jpg'
+import ImageBenevole from '../images/imgbenevole.jpg'
 
 function HelpUsPage() {
   return (
@@ -17,15 +19,36 @@ function HelpUsPage() {
       </div>
 
 
-      {/* BLOC DEVENIR BÉNÉVOLE*/}
-      <div className="container mx-auto px-4 pb-14">
-        <section className="m-0 p-0">
+      {/* BLOC ADHESION & DON */}
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-x-8 md:space-y-0 pb-14">
+        {/* Card pour "Adhérer à l'asso" */}
+        <CardHelp
+          title="Adhérer à l'association"
+          description="Aidez notre association à grandir en devenant membre."
+          link="https://www.helloasso.com/adhesion"
+          imageSrc={DonImg}
+          buttonText="Adhérer"
+        />
+
+        {/* Card pour "Faire un don" */}
+        <CardHelp
+          title="Faire un don"
+          description="Soutenez notre action en faisant un don libre."
+          link="https://www.helloasso.com/don"
+          imageSrc={DonImg}
+          buttonText="Faire un don"
+        />
+      </div>
+
+            {/* BLOC DEVENIR BÉNÉVOLE*/}
+            <div className="container mx-auto px-4">
+        <section className="m-0 pt-14 pb-14">
           <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col justify-center w-full md:w-full md:pr-4 md:items-start md:text-start">
-              <h2 className="text-h2TextColor font-bold text-lg font-montserrat mb-6 text-center md:text-start">
+            <div className="flex flex-col justify-center w-full items-center text-center md:w-1/2 md:pr-4 md:items-start md:text-start">
+              <h2 className="text-h2TextColor font-bold text-lg font-montserrat mb-6">
                 Devenir bénévole
               </h2>
-              <p className="mb-14">
+              <p className="mb-7">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -33,6 +56,18 @@ function HelpUsPage() {
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p className="mb-7">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p className="mb-14">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -42,34 +77,13 @@ function HelpUsPage() {
               </p>
               <Button text="Nous contacter" to="/contact" />
             </div>
-          </div>
-        </section>
-      </div>
-
-      {/* BLOC FAIRE UN DON*/}
-      <div className="container mx-auto px-4 pb-14">
-        <section className="m-0 p-0">
-          <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col justify-center w-full md:w-full md:pr-4 md:items-start md:text-start">
-              <h2 className="text-h2TextColor font-bold text-lg font-montserrat mb-6 text-center md:text-start">
-                Faire un don
-              </h2>
-              <p className="mb-14">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <Button text="Nous contacter" to="/contact" />
+            {/* IMAGE CHAT */}
+            <div className="w-full pt-14 flex justify-center md:w-1/2 md:pl-4 md:pt-0">
+              <img
+                className="max-w-[70%] md:w-[1100px]"
+                src={ImageBenevole}
+                alt="Image bénévolat"
+              />
             </div>
           </div>
         </section>
