@@ -6,10 +6,12 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header>
-      <div className="flex px-4 bg-backgroundColor">
+    <header className="px-4 container mx-auto">
+      <div className="flex bg-backgroundColor">
         <div className="w-2/6">
-          <img className="w-28" src={logoPattounes} alt="Logo Pattounes" />
+          <a href="/">
+            <img className="w-28" src={logoPattounes} alt="Logo Pattounes" />
+          </a>
         </div>
 
         <nav
@@ -47,8 +49,17 @@ function Header() {
           </button>
         </div>
 
-        <div className="w-1/12 ps-12 content-center">
-          <img className="w-16" src={logoFacebook} alt="Logo Facebook" />
+        <div className="flex justify-end items-center w-auto md:w-1/12 ml-auto">
+          <a
+            href="https://www.facebook.com/lespattounesducoeur/?locale=fr_FR"
+            target="_blank"
+          >
+            <img
+              className="w-16 h-16 object-contain"
+              src={logoFacebook}
+              alt="Logo Facebook"
+            />
+          </a>
         </div>
       </div>
     </header>
