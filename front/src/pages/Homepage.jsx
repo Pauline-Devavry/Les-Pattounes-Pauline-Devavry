@@ -76,7 +76,7 @@ function Homepage() {
         <h1 className="text-h2TextColor text-center font-bold text-lg font-montserrat py-6">
           Nos chats à l'adoption
         </h1>
-        <CatsList limit={6} />
+        <CatsList limit={8} />
         <Button text="Voir tous nos chats" to="/chats" />
       </div>
 
