@@ -23,9 +23,9 @@ function CatsList({limit}) {
         {displayedCats.map((cat) => (
           <CatCard
           key={cat.id}
+          id= {cat.id}
           name={cat.name}
           age={cat.age}
-          description={cat.description}
         />
         ))}
       </div>
